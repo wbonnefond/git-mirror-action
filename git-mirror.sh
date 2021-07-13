@@ -19,4 +19,4 @@ git config --add remote.origin.fetch "+refs/tags/*:refs/tags/*"
 git fetch -p origin
 # Exclude refs created by GitHub for pull request.
 git for-each-ref --format 'delete %(refname)' refs/pull | git update-ref --stdin
-git push --all mirror
+git push --all -f mirror
